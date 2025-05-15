@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event List</title>
+  <link rel="stylesheet" href="eventlist.css">
+</head>
+<body>
+  <div id="eventListContainer">
+    <!-- Content will be dynamically loaded here -->
+    <div id="loadingState" class="loading-container">
+      <svg id="loadingSpinner" class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v4m0 12v4m-8-8H2m20 0h-4" />
+      </svg>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="eventlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+:root {
+    --background: #fff;
+    --foreground: #020817;
+    --primary: #3b82f6;
+    --primary-foreground: #f8fafc;
+    --accent: #6366f1;
+    --accent-foreground: #eef2ff;
+    --destructive: #ef4444;
+    --destructive-foreground: #fef2f2;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --radius: 0.5rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding: 1rem;
+    background-color: #f8fafc;
+  }
+  
+  /* Card Styles */
+  .event-card {
+    background-color: var(--background);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+  }
+  
+  .event-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-description {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  
+  .card-content {
+    padding: 0 1.5rem 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .event-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    color: var(--accent);
+  }
+  
+  .card-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  
+  .owner-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border-color: var(--border);
+    color: var(--foreground);
+  }
+  
+  .btn-outline:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .btn-accent {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .btn-accent:hover {
+    background-color: rgba(99, 102, 241, 0.9);
+  }
+  
+  .btn-destructive {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+  }
+  
+  .btn-destructive:hover {
+    background-color: rgba(239, 68, 68, 0.9);
+  }
+  
+  .icon-sm {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+  
+  /* Dialog Styles */
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .dialog {
+    background-color: var(--background);
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dialog-header {
+    margin-bottom: 1rem;
+  }
+  
+  .dialog-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dialog-description {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  
+  .dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* Loading Spinner */
+  .spinner {
+    animation: spin 1s linear infinite;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Events</title>
+  <link rel="stylesheet" href="browse-event.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Loading state -->
+    <div id="loadingState" class="loading-container">
+      <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v4m0 12v4m-8-8H2m20 0h-4" />
+      </svg>
+    </div>
+
+    <!-- Empty states will be inserted here dynamically -->
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="browse-event.js"></script>
+</body>
+</html>
